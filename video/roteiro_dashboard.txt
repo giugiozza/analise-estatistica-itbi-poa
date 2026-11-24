@@ -1,0 +1,33 @@
+Olá! Vou apresentar o dashboard da Análise Estatística dos Registros de ITBI de Porto Alegre, elaborado a partir dos dados abertos da cidade.
+
+O ITBI incide sobre a transmissão de bens imóveis. A população reúne 246.340 registros de 2020 a 2026 e 20 variáveis. Antes do tratamento, a base tinha 376.173 linhas e 21 variáveis; removemos linhas sem data de pagamento e duas áreas inválidas.
+
+O objetivo é caracterizar as transferências e comparar população e amostra. Analisamos a área privativa, variável contínua em metros quadrados, e a finalidade da construção, categorizada em Apartamento, Casa, Box, Terreno ou Outros. No teste de proporção, o evento é ser Apartamento.
+
+Na “Visão geral”, 235.305 registros têm área informada e 235.291 têm finalidade informada. Sem imputação, cada cálculo usa somente casos válidos.
+
+No painel “População”, os indicadores mostram 246.340 registros, área média de 75,74 metros quadrados, mediana de 43,60 metros quadrados e proporção de apartamentos de 47,32%. O histograma com curva de densidade mostra a distribuição assimétrica da área: áreas muito elevadas puxam a média para cima. É possível limitar a visualização ao percentil 99,5%, usar todos os valores ou definir uma faixa, além de ativar escala logarítmica. Esses controles não alteram os cálculos.
+
+À direita, as barras mostram a frequência relativa dos tipos. A tabela apresenta média, mediana, desvio padrão, mínimo e máximo. O boxplot resume mediana e dispersão até o percentil 99,5%. Os quartis são 13,13, 43,60 e 76,39 metros quadrados.
+
+Sobre a amostra: cada linha é uma unidade amostral. Selecionamos uma Amostra Aleatória Simples sem reposição, com seed 42, em 403 linhas. O dimensionamento considerou 95% de confiança, erro máximo de 5 pontos percentuais e p igual a 50%, o caso mais conservador, ajustado aos registros válidos da variável qualitativa.
+
+No painel “Amostra”, os 403 registros produzem média de 77,95 metros quadrados, mediana de 42,62 e 47,69% de apartamentos. Há 390 áreas e 390 finalidades válidas. Os mesmos gráficos apresentam histograma, barras, boxplot, quartis e estatísticas.
+
+A tabela calcula diferença como amostra menos população: a média amostral é cerca de 2,21 metros quadrados maior. O histograma sobreposto usa 30 classes normalizadas e o limite de 99,5% da população. O gráfico agrupado compara os tipos em uma escala comum; “Não informado” é uma categoria própria e cada conjunto soma 100%.
+
+No painel “Inferência e Comparação”, podemos alterar significância e confiança. Usaremos alfa igual a 5% e intervalo bilateral de 95%.
+
+O primeiro teste avalia a média da área. A hipótese nula afirma que ela é igual a 100 metros quadrados; a alternativa afirma que é menor. O gráfico mostra média amostral de 77,95 metros quadrados, intervalo de confiança e média populacional conhecida de 75,74. Uma linha tracejada marca o valor de referência.
+
+A estatística t é -1,80 e o valor-p unilateral é 0,036. Como é menor que alfa, rejeitamos a hipótese nula: há evidência de que a média está abaixo de 100 metros quadrados. O intervalo de 95% vai de 53,90 a 102,00 metros quadrados e contém o parâmetro populacional.
+
+O segundo teste avalia a proporção de apartamentos. A hipótese nula afirma p igual a 50%; a alternativa, p maior que 50%.
+
+A estimativa amostral é 47,69%, o parâmetro populacional é 47,32% e o intervalo vai de 42,74% a 52,65%. A estatística z é -0,91 e o valor-p unilateral é 0,819. Como é maior que 5%, não rejeitamos a hipótese nula: não há evidência de que apartamentos formem mais da metade. Isso não confirma p igual a 50%.
+
+O valor-p é a probabilidade, supondo a hipótese nula verdadeira, de observar uma estatística tão ou mais extrema que a calculada. Não é a probabilidade de a hipótese nula ser verdadeira.
+
+Por fim, a tabela reúne médias, proporções e intervalos e indica quais contêm o parâmetro conhecido. O teste da média usa t de Student, o da proporção usa Wald e valores extremos podem afetar média e desvio padrão.
+
+Em síntese, o dashboard integra qualidade dos dados, estatística descritiva da população e da amostra e inferência. A amostra representa os principais padrões da população, mas os testes dependem da hipótese formulada, do nível de significância e da variabilidade dos dados.

@@ -1,0 +1,9 @@
+[theme]
+primaryColor = "#1849C6"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#EDF1F5"
+textColor = "#0F172A"
+font = "sans serif"
+
+[client]
+showErrorDetails = "full"
