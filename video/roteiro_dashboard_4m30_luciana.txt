@@ -1,0 +1,35 @@
+Olá! Este dashboard analisa registros de ITBI de Porto Alegre. A população reúne duzentos e quarenta e seis mil trezentos e quarenta registros.
+
+Na visão geral, há 235.305 áreas válidas e 235.291 finalidades informadas. Cada cálculo usa casos válidos, sem imputação.
+
+No painel População, a área média é 75,74 metros quadrados, a mediana é 43,60, e apartamentos representam 47,32 por cento. A população total tem 246.340 registros.
+
+O histograma mostra áreas assimétricas: poucos imóveis muito grandes elevam a média. Os controles limitam a visualização, sem alterar os cálculos.
+
+As barras comparam os tipos de imóvel. Apartamentos e boxes predominam; casas, outros, terrenos e registros sem informação completam a distribuição.
+
+A tabela resume cinco medidas; o boxplot mostra a dispersão até o percentil 99,5. Os quartis são 13,13, 43,60 e 76,39 metros quadrados.
+
+A amostra aleatória simples, sem reposição, tem 403 registros e seed 42. O planejamento usa confiança de 95 por cento, erro de 5 pontos percentuais e proporção de 50 por cento, a escolha conservadora.
+
+No painel Amostra, a média da área é 77,95 metros quadrados, a mediana é 42,62 e apartamentos representam 47,69 por cento. Há 390 áreas e 390 finalidades válidas.
+
+O histograma e as barras da amostra mostram a distribuição das áreas e dos tipos de imóvel.
+
+A tabela da amostra apresenta média, mediana, desvio padrão, mínimo e máximo das áreas válidas.
+
+Na comparação, a diferença é calculada como amostra menos população. A média amostral é 2,21 metros quadrados maior; a proporção de apartamentos difere apenas 0,37 ponto percentual.
+
+O histograma sobreposto usa as mesmas 30 classes para os dois conjuntos e limita a visualização ao percentil 99,5 da população. O gráfico ao lado compara as proporções por tipo, incluindo “Não informado”.
+
+No painel Inferência, usamos significância de 5 por cento e intervalo bilateral de confiança de 95 por cento.
+
+O primeiro teste verifica se a média é menor que 100 metros quadrados. A média amostral é 77,95; t é menos 1,80 e o valor-p é 0,036. Rejeitamos a hipótese nula. O intervalo de 95 por cento vai de 53,90 a 102 metros quadrados e contém a média populacional.
+
+Para apartamentos, testamos se a proporção supera 50 por cento. A amostra estima 47,69 por cento, ante 47,32 na população; o intervalo vai de 42,74 a 52,65 por cento. Com valor-p de 0,819, não rejeitamos a hipótese nula, mas isso não prova que a proporção seja exatamente metade.
+
+O valor-p mede quão extremos seriam os dados se a hipótese nula fosse verdadeira; não é a probabilidade de essa hipótese estar correta.
+
+A tabela final reúne estimativas, intervalos e indica se contêm os parâmetros conhecidos.
+
+Em síntese, os painéis mostram a qualidade dos dados, os padrões da população e da amostra e os limites das conclusões inferenciais.
